@@ -1,0 +1,13 @@
+{
+    "PF1": {
+        "design": 10, 
+        "minimum": 20, 
+        "stretch": 5
+    }, 
+    "design": 30.273119677358963, 
+    "minimum": 24.138288087813891, 
+    "name": "PA2", 
+    "pa2Units": "mmag", 
+    "pf1Units": "%", 
+    "stretch": 36.260612428071873
+}

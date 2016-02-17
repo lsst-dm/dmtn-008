@@ -13,14 +13,14 @@ serial_number: '008'
 doc_id: 'DMTN-008'
 
 # Title of the document, without the series/serial designation
-doc_title: 'Introducing validate_drp: Validate an output repository against Key Performance Metrics'
+doc_title: 'Introducing validate_drp: Validate an output repository against SRD Key Performance Metrics'
 
 # Author names, ordered as a list. Each author name should be formatted as 'First Last'
 authors:
     - 'Michael Wood-Vasey'
 
 # Current document version
-last_revised: '2016-02-22'
+last_revised: '2016-02-17'
 
 # Version. Use Semvar, e.g., 1.0, including .dev, as necessary
 # This version string should correspond to the git tag when the document is published on Zenodo

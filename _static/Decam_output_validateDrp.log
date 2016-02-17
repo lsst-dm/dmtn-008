@@ -1,0 +1,42 @@
+5019 sources in ccd 10  visit 176837
+5283 sources in ccd 11  visit 176837
+5192 sources in ccd 12  visit 176837
+5395 sources in ccd 13  visit 176837
+5171 sources in ccd 14  visit 176837
+5831 sources in ccd 15  visit 176837
+5726 sources in ccd 16  visit 176837
+5209 sources in ccd 17  visit 176837
+5428 sources in ccd 18  visit 176837
+3035 sources in ccd 10  visit 176846
+2897 sources in ccd 11  visit 176846
+2922 sources in ccd 12  visit 176846
+2771 sources in ccd 13  visit 176846
+2771 sources in ccd 14  visit 176846
+3258 sources in ccd 15  visit 176846
+3228 sources in ccd 16  visit 176846
+3011 sources in ccd 17  visit 176846
+3385 sources in ccd 18  visit 176846
+Median value of the astrometric scatter - all magnitudes: 70.671 mas
+Astrometric scatter (median) - mag < 21.0 : 35.1 mas
+Median astrometric scatter 35.1 mas is larger than reference : 25.0 mas 
+Number of matched sources 8135 is too small (shoud be > 10000)
+Median value of the photometric scatter - all magnitudes: 81.483 mmag
+Photometric scatter (median) - mag < 21.0 : 65.6 mmag
+Median photometric scatter 65.629 mmag is larger than reference : 25.000 mag 
+Number of matched sources 8135 is too small (shoud be > 10000)
+No stars found that are 199.0--201.0 arcmin apart.
+PA1(RMS) = 40.15+-0.00 mmag
+PA1(IQR) = 38.17+-0.48 mmag
+minimum: PF1=20% of diffs more than PA2 = 46.62 mmag (target is < 15 mmag)
+design : PF1=10% of diffs more than PA2 = 62.89 mmag (target is < 15 mmag)
+stretch: PF1= 5% of diffs more than PA2 = 79.46 mmag (target is < 10 mmag)
+Median of distribution of RMS of distance of stellar pairs.
+DESIGN goals
+For stars from 17.00 < mag < 21.50
+from D = [4.00, 6.00] arcmin, AM1=29.15 mas (target is < 10 mas).
+  48.77% of sample deviates by >30 mas (target is < 10%)
+Median of distribution of RMS of distance of stellar pairs.
+DESIGN goals
+For stars from 17.00 < mag < 21.50
+from D = [19.00, 21.00] arcmin, AM2=28.79 mas (target is < 10 mas).
+  48.41% of sample deviates by >30 mas (target is < 10%)
