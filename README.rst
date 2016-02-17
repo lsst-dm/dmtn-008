@@ -1,10 +1,10 @@
 ################################################################################################
-DMTN-006 Introducing validate_drp: Validate an output repository against Key Performance Metrics
+DMTN-008 Introducing validate_drp: Validate an output repository against Key Performance Metrics
 ################################################################################################
 
 validate_drp
 
-View this technote at http://dmtn-006.lsst.io or see a preview of the
+View this technote at http://dmtn-008.lsst.io or see a preview of the
 current version in `this repo`_
 
 .. _this repo: ./index.rst
@@ -23,8 +23,8 @@ You can clone this repository and build the technote locally with `Sphinx`_
 
 .. code-block:: bash
 
-   git clone https://github.com/lsst-dm/dmtn-006
-   cd dmtn-006
+   git clone https://github.com/lsst-dm/dmtn-008
+   cd dmtn-008
    pip install -r requirements.txt
    make html
 
@@ -39,7 +39,7 @@ A good primer on reStructuredText is available at http://docs.lsst.codes/en/late
 Remember that images and other types of assets should be stored in the ``_static/`` directory of this repository.
 See ``_static/README.rst`` for more information.
 
-The published technote at http://dmtn-006.lsst.io will be automatically rebuilt whenever you push your changes to the ``master`` branch on `GitHub <https://github.com/lsst-dm/dmtn-006>`_.
+The published technote at http://dmtn-008.lsst.io will be automatically rebuilt whenever you push your changes to the ``master`` branch on `GitHub <https://github.com/lsst-dm/dmtn-008>`_.
 
 Updating metadata
 =================
