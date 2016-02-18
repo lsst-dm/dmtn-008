@@ -39,14 +39,34 @@
 
 :tocdepth: 2
 
+*Draft in Development*
+
 Executive Summary
 =================
 
-Validate the LSST DM processing of a set of data with ``validate_drp``
+.. code-block:: bash
 
-Details in the exampes section.
+    validateDrp.py Cfht/output
+    [...]
+    PA1(RMS) = 19.07+-0.00 mmag
+    PA1(IQR) = 20.86+-0.40 mmag
+    minimum: PF1=20% of diffs more than PA2 = 24.14 mmag (target is < 15 mmag)
+    design : PF1=10% of diffs more than PA2 = 30.27 mmag (target is < 15 mmag)
+    stretch: PF1= 5% of diffs more than PA2 = 36.26 mmag (target is < 10 mmag)
+    Median of distribution of RMS of distance of stellar pairs.
+    DESIGN goals
+    For stars from 17.00 < mag < 21.50
+    from D = [4.00, 6.00] arcmin, AM1=9.23 mas (target is < 10 mas).
+      10.46% of sample deviates by >30 mas (target is < 10%)
+    Median of distribution of RMS of distance of stellar pairs.
+    DESIGN goals
+    For stars from 17.00 < mag < 21.50
+    from D = [19.00, 21.00] arcmin, AM2=7.21 mas (target is < 10 mas).
+      11.32% of sample deviates by >30 mas (target is < 10%)
 
-For more details on the package itself, the most useful reference is the README.md of the repository:
+Calculates, prints, plots, and saves validation metrics for the calibrated data in that repository.
+
+For more details on the package itself and installation, please see the README.md at
 
 https://github.com/lsst/validate_drp
 
@@ -118,7 +138,7 @@ produces an output repository and analyzes it with ``validateDrp.py Cfht/output`
     
 These first two figures aren't actually formal SRD numbers.  They are instead the same-object repeatability RMS in the calibrated values of the astrometric position and magnitude.
     
-The next three figures are representations of the formal LSST SRC numbers.
+The next three figures are representations of the formal LSST SRD numbers.
 
 .. figure:: /_static/Cfht_output_r_PA1.png
     :name: fig-cfht-pa1
@@ -146,7 +166,7 @@ The next three figures are representations of the formal LSST SRC numbers.
     Distribution of the repeatability of astrometric distance between stars separted by 19-21 arcminutes.  AM2.
 
 
-Run on DECam COSMOS data
+Run on sample DECam data
 ------------------------
 
 .. code-block:: bash
@@ -212,7 +232,7 @@ produces an output repository and analyzes it with ``validateDrp.py Decam/output
     
 These first two figures aren't actually formal SRD numbers.  They are instead the same-object repeatability RMS in the calibrated values of the astrometric position and magnitude.
     
-The next three figures are representations of the formal LSST SRC numbers.
+The next three figures are representations of the formal LSST SRD numbers.
 
 .. figure:: /_static/Decam_output_z_PA1.png
     :name: fig-cfht-pa1
