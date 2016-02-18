@@ -41,6 +41,8 @@
 
 *Draft in Development*
 
+Examples here assume tickets/DM-5120 (which is not yet merged into master).  This ticket gives ``validateDrp.py`` the ability to work on an arbitrary repository with no need for a configuration file.
+
 Executive Summary
 =================
 
@@ -66,19 +68,23 @@ Executive Summary
 
 Calculates, prints, plots, and saves validation metrics for the calibrated data in that repository.
 
-For more details on the package itself and installation, please see the README.md at
-
+For more details on the package itself and installation, see 
 https://github.com/lsst/validate_drp
+
+Sample Data
+===========
+
+While ``validate_drp`` will run on any data set, two sets of data from instruments similar to LSST have been created to provide end-to-end examples of producing an output data repository and analyzing it with ``validate_drp``.  These have also proven to be useful for debugging and checking the results of algorithmic and configuration changes in the pipeline code.
+
+1. ``validation_data_cfht`` contains test CFHT data and selected SDSS reference catalogs in astrometry.net format.
+2. ``validation_data_decam`` contains test DECam data and selected SDSS reference catalogs in astrometry.net format.
+
 
 Examples
 ========
 
 Run on sample CFHT data
 -----------------------
-
-``validation_data_decam`` contains both the test DECam data and selected SDSS reference catalogs in astrometry.net format.
-
-Run with:
 
 .. code-block:: bash
     :name: cfht-runexample
@@ -174,8 +180,6 @@ Run on sample DECam data
     setup validation_data_decam
     setup validate_drp
     ${VALIDATE_DRP_DIR}/examples/runDecamTest.sh
-
-``validation_data_decam`` contains both the test DECam data and selected SDSS reference catalogs in astrometry.net format.
 
 produces an output repository and analyzes it with ``validateDrp.py Decam/output``.
 
