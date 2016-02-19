@@ -68,6 +68,8 @@ Executive Summary
 
 Calculates, prints, plots, and saves validation metrics for the calibrated data in that repository.
 
+Tested and works on CFHT (``validation_data_cfht``), DECam (``validation_data_decam``), and HSC (``ci_hsc``).
+
 For more details on the package itself and installation, see 
 https://github.com/lsst/validate_drp
 
@@ -78,6 +80,7 @@ While ``validate_drp`` will run on any data set, two sets of data from instrumen
 
 1. ``validation_data_cfht`` contains test CFHT data and selected SDSS reference catalogs in astrometry.net format.
 2. ``validation_data_decam`` contains test DECam data and selected SDSS reference catalogs in astrometry.net format.
+3. ``ci_hsc`` provides a full set of data and analyses to test the process of HSC data by ``obs_subaru``.  Despite not having been developed on HSC data, ``validate_drp`` runs on the generated repository with no additional configuration needed.
 
 
 Examples
