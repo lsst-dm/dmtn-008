@@ -272,6 +272,7 @@ Run on sample HSC data
 ----------------------
 
 .. code-block:: bash
+
     setup obs_subaru
     git clone git@github.com:lsst/ci_hsc
     cd ci_hsc
