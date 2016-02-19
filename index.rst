@@ -189,7 +189,7 @@ Run on sample DECam data
 produces an output repository and analyzes it with ``validateDrp.py Decam/output``.
 
 .. code-block:: bash
-    :name: run-cfht-output
+    :name: run-decam-output
 
     [...]
     Median value of the astrometric scatter - all magnitudes: 70.671 mas
@@ -267,3 +267,90 @@ The next three figures are representations of the formal LSST SRD numbers.
     :target: ../../_static/Decam_output_z_AM2_D_20_ARCMIN_17.0-21.5.png
 
     Distribution of the repeatability of astrometric distance between stars separted by 19-21 arcminutes.  AM2.
+
+Run on sample HSC data
+----------------------
+
+.. code-block:: bash
+    setup obs_subaru
+    git clone git@github.com:lsst/ci_hsc
+    cd ci_hsc
+    setup -r .
+    eups declare astrometry_net_data sdss-dr9-fink-v5b+ci_hsc
+    setup -j astrometry_net_data sdss-dr9-fink-v5b+ci_hsc
+    scons opt=3 -j 8
+    # Wait an hour
+    setup validate_drp
+    validateDrp.py ${CI_HSC_DIR}/DATA
+
+Just showing here the results from the r-band processing:
+
+.. code-block:: bash
+    :name: run-hsc-output
+
+    [...]
+    Median value of the astrometric scatter - all magnitudes: 68.136 mas
+    Astrometric scatter (median) - mag < 21.0 : 20.5 mas
+    Median value of the photometric scatter - all magnitudes: 64.909 mmag
+    Photometric scatter (median) - mag < 21.0 : 11.8 mmag
+    No stars found that are 199.0--201.0 arcmin apart.
+    PA1(RMS) = 19.56+-0.70 mmag
+    PA1(IQR) = 14.93+-0.72 mmag
+    minimum: PF1=20% of diffs more than PA2 = 21.46 mmag (target is < 15 mmag)
+    design : PF1=10% of diffs more than PA2 = 27.04 mmag (target is < 15 mmag)
+    stretch: PF1= 5% of diffs more than PA2 = 32.15 mmag (target is < 10 mmag)
+    Median of distribution of RMS of distance of stellar pairs.
+    DESIGN goals
+    For stars from 17.00 < mag < 21.50
+    from D = [4.00, 6.00] arcmin, AM1=11.45 mas (target is < 10 mas).
+      21.66% of sample deviates by >30 mas (target is < 10%)
+    Median of distribution of RMS of distance of stellar pairs.
+    DESIGN goals
+    For stars from 17.00 < mag < 21.50
+    from D = [19.00, 21.00] arcmin, AM2=0.00 mas (target is < 10 mas).
+      0.00% of sample deviates by >30 mas (target is < 10%)
+
+
+.. figure:: /_static/DATA_HSC-R_check_astrometry.png
+    :name: fig-cfht-pa1
+    :alt: DECam Astrometry RMS
+    :target: ../../_static/DATA_HSC-R_check_astrometry.png
+
+    Distribution of the r-band RMS in the measured position of the sources for the same object across visits.
+
+.. figure:: /_static/DATA_HSC-R_check_photometry.png
+    :name: fig-cfht-pa1
+    :alt: DECam Photometry RMS
+    :target: ../../_static/DATA_HSC-R_check_photometry.png
+
+    The photometric repeatability in the measured magnitude of the sources for the same object across visits.
+    Based on ``base_PsfFlux_flux`` as calibrated using ``calexp.calib``.
+    The blue subsample indicates stars < 21 mag.
+
+    (top left) Distribution of RMS for each object.
+    (top right) RMS vs. mean magnitude.
+    (bottom left) A comparison of the quoted uncertainty vs. the observe variation (log-log scale in mmag).  Quoted magnitude uncertainty from the ``src`` file.  RMS of quoted magnitude.
+    (bottom right) Quoted magnitude uncertainty vs. mean magnitude.  Fit model for expected behavior for photon Poisson statistics.
+    
+These first two figures aren't actually formal SRD numbers.  They are instead the same-object repeatability RMS in the calibrated values of the astrometric position and magnitude.
+    
+The next three figures are representations of the formal LSST SRD numbers.
+
+.. figure:: /_static/DATA_HSC-R_PA1.png
+    :name: fig-cfht-pa1
+    :alt: HSC PA1
+    :target: ../../_static/DATA_HSC-R_PA1.png
+
+
+    Difference in magnitude between the visits for the stars between 17--21.5 mag.  In this example there are only two visits.  In general ``validate_drp`` considers a random sample of pairs of visits.
+    The RMS and the inter-quartile range (IQR: 75%-25%) are each computed from the distribution of these differences in magnitudes.   The reported IQR is normalized to the same scale as an RMS.
+    (left) Difference vs. mean magnitude.  RMS (red), IQR (green) are shown as horizontal lines.
+    (right) Distribution of the idfferences.  The RMS (ref) and IQR (green) are visualized as Gaussians with those values.
+
+.. figure:: /_static/DATA_HSC-R_AM1_D_5_ARCMIN_17.0-21.5.png
+    :name: fig-cfht-am1
+    :alt: HSC AM1
+    :target: ../../_static/DATA_HSC-R_AM1_D_5_ARCMIN_17.0-21.5.png
+
+    Distribution of the repeatability of astrometric distance between stars separted by 4-6 arcminutes.  The SRD spec of AM1=10 mas is shown in red.  The SRD spec for the outlier fraction with RMS relative separation of > AM1+AD1=30 mas (green) is 10.46%, which is only slight above the "design" specification of AF1=10%.
+
