@@ -76,11 +76,13 @@ https://github.com/lsst/validate_drp
 Sample Data
 ===========
 
-While ``validate_drp`` will run on any data set, two sets of data from instruments similar to LSST have been created to provide end-to-end examples of producing an output data repository and analyzing it with ``validate_drp``.  These have also proven to be useful for debugging and checking the results of algorithmic and configuration changes in the pipeline code.
+While ``validate_drp`` will run on any data set, two sets of data from instruments similar to LSST (CFHT and DECam) were created to provide end-to-end examples of producing an output data repository and analyzing it with ``validate_drp``.  These have also proven to be useful for debugging and checking the results of algorithmic and configuration changes in the pipeline code.  In addition, the HSC efforts of produced a very comprehensive package for running basic processing up through co-addition on a dataset.
 
 1. ``validation_data_cfht`` contains test CFHT data and selected SDSS reference catalogs in astrometry.net format.
 2. ``validation_data_decam`` contains test DECam data and selected SDSS reference catalogs in astrometry.net format.
-3. ``ci_hsc`` provides a full set of data and analyses to test the process of HSC data by ``obs_subaru``.  Despite not having been developed on HSC data, ``validate_drp`` runs on the generated repository with no additional configuration needed.
+3. ``ci_hsc`` provides a full set of data and analyses to test the process of HSC data by ``obs_subaru``.  
+
+Despite not having been developed on HSC data, ``validate_drp`` runs on the generated repository with no additional configuration needed.
 
 
 Examples
