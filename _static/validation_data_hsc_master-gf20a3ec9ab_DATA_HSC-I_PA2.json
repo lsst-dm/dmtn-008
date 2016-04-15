@@ -1,0 +1,27 @@
+{
+    "PA2": 27.634548572227455, 
+    "PA2_measured": {
+        "design": 27.634548572227455, 
+        "minimum": 20.850247819913982, 
+        "stretch": 33.829945465412941
+    }, 
+    "PA2_spec": {
+        "design": 15, 
+        "minimum": 15, 
+        "stretch": 10
+    }, 
+    "PF1": 20.578778135048232, 
+    "PF1_measured": {
+        "design": 20.578778135048232, 
+        "minimum": 20.578778135048232, 
+        "stretch": 27.974276527331188
+    }, 
+    "PF1_spec": {
+        "design": 10, 
+        "minimum": 20, 
+        "stretch": 5
+    }, 
+    "name": "PA2", 
+    "pa2Units": "mmag", 
+    "pf1Units": "%"
+}

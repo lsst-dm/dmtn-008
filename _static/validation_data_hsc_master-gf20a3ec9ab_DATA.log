@@ -1,0 +1,125 @@
+CameraMapper: Loading registry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/registry.sqlite3
+CameraMapper: Loading calibRegistry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/CALIB/calibRegistry.sqlite3
+CameraMapper: Loading registry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/registry.sqlite3
+CameraMapper: Loading calibRegistry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/CALIB/calibRegistry.sqlite3
+CameraMapper: Loading registry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/registry.sqlite3
+CameraMapper: Loading calibRegistry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/CALIB/calibRegistry.sqlite3
+CameraMapper: Loading registry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/registry.sqlite3
+CameraMapper: Loading calibRegistry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/CALIB/calibRegistry.sqlite3
+/Users/wmwv/local/lsst/validate_drp/python/lsst/validate/drp/check.py:312: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(sigmaSq)
+/usr/local/lib/python2.7/site-packages/scipy/optimize/minpack.py:690: OptimizeWarning: Covariance of the parameters could not be estimated
+  category=OptimizeWarning)
+CameraMapper: Loading registry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/registry.sqlite3
+CameraMapper: Loading calibRegistry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/CALIB/calibRegistry.sqlite3
+CameraMapper: Loading registry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/registry.sqlite3
+CameraMapper: Loading calibRegistry registry from validation_data_hsc/master-gf20a3ec9ab/DATA/CALIB/calibRegistry.sqlite3
+1059 sources in ccd 23  visit 903986
+732 sources in ccd 22  visit 903986
+1096 sources in ccd 16  visit 903986
+811 sources in ccd 100  visit 903986
+1013 sources in ccd 24  visit 903988
+949 sources in ccd 23  visit 903988
+1014 sources in ccd 17  visit 903988
+935 sources in ccd 16  visit 903988
+1174 sources in ccd 25  visit 903990
+1188 sources in ccd 18  visit 903990
+987 sources in ccd 100  visit 904010
+1168 sources in ccd 10  visit 904010
+1054 sources in ccd 4  visit 904010
+1297 sources in ccd 12  visit 904014
+1130 sources in ccd 6  visit 904014
+1187 sources in ccd 1  visit 904014
+Median value of the astrometric scatter - all magnitudes: 62.077 mas
+Astrometric scatter (median) - snr > 100.0 : 16.0 mas
+Median value of the photometric scatter - all magnitudes: 49.789 mmag
+Photometric scatter (median) - SNR > 100.0 : 11.6 mmag
+[ 1007.20557468    23.85079842]
+$C\theta$, $\sigma_{\rm sys}$ =
+1007, 23.85 [mas]
+[ -3.75969400e-08   3.92922234e-02   2.34248039e+01]
+$\sigma_{\rm sys} {\rm [mmag]}$, $\gamma$, $m_5 {\rm [mag]}$=
+-0.0000, 0.0393, 23.425
+No stars found that are 199.0--201.0 arcmin apart.
+=============================================
+Detailed comparison against SRD requirements.
+The LSST SRD is at:  http://ls.st/LPM-17
+PA1(RMS) = 19.18+-0.48 mmag
+PA1(IQR) = 14.90+-0.76 mmag
+--
+minimum: PF1=20% of diffs more than PA2 = 20.85 mmag (target is < 15 mmag)
+design : PF1=10% of diffs more than PA2 = 27.63 mmag (target is < 15 mmag)
+stretch: PF1= 5% of diffs more than PA2 = 33.83 mmag (target is < 10 mmag)
+--
+minimum: PF1=20% of diffs more than PA2 = 15.00 mmag (target is < 20 %)
+design : PF1=20% of diffs more than PA2 = 15.00 mmag (target is < 10 %)
+stretch: PF1=27% of diffs more than PA2 = 10.00 mmag (target is <  5 %)
+--
+Median RMS of distances between pairs of stars.
+  DESIGN goals
+  For stars from 17.00 < mag < 21.50 and D = [4.00, 6.00] arcmin
+AM1=11.09 mas (target is < 10 mas).
+  18.88% of sample deviates by >30 mas (target is < 10%)
+--
+Median RMS of distances between pairs of stars.
+  DESIGN goals
+  For stars from 17.00 < mag < 21.50 and D = [19.00, 21.00] arcmin
+AM2=10.40 mas (target is < 10 mas).
+  20.00% of sample deviates by >30 mas (target is < 10%)
+1214 sources in ccd 23  visit 903334
+1241 sources in ccd 22  visit 903334
+1245 sources in ccd 16  visit 903334
+889 sources in ccd 100  visit 903334
+1393 sources in ccd 24  visit 903336
+1478 sources in ccd 17  visit 903336
+1568 sources in ccd 25  visit 903338
+1620 sources in ccd 18  visit 903338
+1068 sources in ccd 100  visit 903342
+1241 sources in ccd 10  visit 903342
+1047 sources in ccd 4  visit 903342
+1617 sources in ccd 11  visit 903344
+1441 sources in ccd 5  visit 903344
+1007 sources in ccd 0  visit 903344
+1589 sources in ccd 12  visit 903346
+1406 sources in ccd 6  visit 903346
+1318 sources in ccd 1  visit 903346
+Median value of the astrometric scatter - all magnitudes: 68.152 mas
+Astrometric scatter (median) - snr > 100.0 : 20.1 mas
+Median value of the photometric scatter - all magnitudes: 65.073 mmag
+Photometric scatter (median) - SNR > 100.0 : 11.9 mmag
+[ 336.75104087   30.99237765]
+$C\theta$, $\sigma_{\rm sys}$ =
+336.8, 30.99 [mas]
+[ -2.36268359e-08   3.81674014e-02   2.44254443e+01]
+$\sigma_{\rm sys} {\rm [mmag]}$, $\gamma$, $m_5 {\rm [mag]}$=
+-0.0000, 0.0382, 24.425
+No stars found that are 199.0--201.0 arcmin apart.
+=============================================
+Detailed comparison against SRD requirements.
+The LSST SRD is at:  http://ls.st/LPM-17
+PA1(RMS) = 19.91+-1.05 mmag
+PA1(IQR) = 14.82+-0.78 mmag
+--
+minimum: PF1=20% of diffs more than PA2 = 20.25 mmag (target is < 15 mmag)
+design : PF1=10% of diffs more than PA2 = 25.80 mmag (target is < 15 mmag)
+stretch: PF1= 5% of diffs more than PA2 = 35.86 mmag (target is < 10 mmag)
+--
+minimum: PF1=19% of diffs more than PA2 = 15.00 mmag (target is < 20 %)
+design : PF1=19% of diffs more than PA2 = 15.00 mmag (target is < 10 %)
+stretch: PF1=27% of diffs more than PA2 = 10.00 mmag (target is <  5 %)
+--
+Median RMS of distances between pairs of stars.
+  DESIGN goals
+  For stars from 17.00 < mag < 21.50 and D = [4.00, 6.00] arcmin
+AM1=11.57 mas (target is < 10 mas).
+  21.97% of sample deviates by >30 mas (target is < 10%)
+--
+Median RMS of distances between pairs of stars.
+  DESIGN goals
+  For stars from 17.00 < mag < 21.50 and D = [19.00, 21.00] arcmin
+AM2=0.00 mas (target is < 10 mas).
+  0.00% of sample deviates by >30 mas (target is < 10%)
+No results available for AM3
+No results available for AF3
+No results available for AM3
+No results available for AF3

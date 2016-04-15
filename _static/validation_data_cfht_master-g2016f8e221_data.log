@@ -1,0 +1,68 @@
+CameraMapper: Loading registry registry from validation_data_cfht/master-g2016f8e221/data/registry.sqlite3
+CameraMapper: Unable to locate calibRegistry registry in root: validation_data_cfht/master-g2016f8e221/data/calibRegistry.sqlite3
+CameraMapper: Unable to locate calibRegistry registry in current dir: ./calibRegistry.sqlite3
+CameraMapper: Loading Posix registry from validation_data_cfht/master-g2016f8e221/data
+CameraMapper: Loading registry registry from validation_data_cfht/master-g2016f8e221/data/registry.sqlite3
+CameraMapper: Unable to locate calibRegistry registry in root: validation_data_cfht/master-g2016f8e221/data/calibRegistry.sqlite3
+CameraMapper: Unable to locate calibRegistry registry in current dir: ./calibRegistry.sqlite3
+CameraMapper: Loading Posix registry from validation_data_cfht/master-g2016f8e221/data
+CameraMapper: Loading registry registry from validation_data_cfht/master-g2016f8e221/data/registry.sqlite3
+CameraMapper: Unable to locate calibRegistry registry in root: validation_data_cfht/master-g2016f8e221/data/calibRegistry.sqlite3
+CameraMapper: Unable to locate calibRegistry registry in current dir: ./calibRegistry.sqlite3
+CameraMapper: Loading Posix registry from validation_data_cfht/master-g2016f8e221/data
+CameraMapper: Loading registry registry from validation_data_cfht/master-g2016f8e221/data/registry.sqlite3
+CameraMapper: Unable to locate calibRegistry registry in root: validation_data_cfht/master-g2016f8e221/data/calibRegistry.sqlite3
+CameraMapper: Unable to locate calibRegistry registry in current dir: ./calibRegistry.sqlite3
+CameraMapper: Loading Posix registry from validation_data_cfht/master-g2016f8e221/data
+/Users/wmwv/local/lsst/validate_drp/python/lsst/validate/drp/check.py:312: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(sigmaSq)
+1295 sources in ccd 12  visit 849375
+1301 sources in ccd 13  visit 849375
+1279 sources in ccd 14  visit 849375
+1309 sources in ccd 21  visit 849375
+1389 sources in ccd 22  visit 849375
+1438 sources in ccd 23  visit 849375
+2062 sources in ccd 12  visit 850587
+2164 sources in ccd 13  visit 850587
+2441 sources in ccd 14  visit 850587
+2179 sources in ccd 21  visit 850587
+2342 sources in ccd 22  visit 850587
+2440 sources in ccd 23  visit 850587
+Median value of the astrometric scatter - all magnitudes: 59.392 mas
+Astrometric scatter (median) - snr > 100.0 : 9.9 mas
+Median value of the photometric scatter - all magnitudes: 115.891 mmag
+Photometric scatter (median) - SNR > 100.0 : 13.0 mmag
+[ 1600.487519       4.72002127]
+$C\theta$, $\sigma_{\rm sys}$ =
+1600, 4.72 [mas]
+[  8.11136881e-08   3.88988265e-02   2.43744787e+01]
+$\sigma_{\rm sys} {\rm [mmag]}$, $\gamma$, $m_5 {\rm [mag]}$=
+0.0001, 0.0389, 24.374
+No stars found that are 199.0--201.0 arcmin apart.
+=============================================
+Detailed comparison against SRD requirements.
+The LSST SRD is at:  http://ls.st/LPM-17
+PA1(RMS) = 17.61+-0.00 mmag
+PA1(IQR) = 18.72+-0.54 mmag
+--
+minimum: PF1=20% of diffs more than PA2 = 22.36 mmag (target is < 15 mmag)
+design : PF1=10% of diffs more than PA2 = 28.40 mmag (target is < 15 mmag)
+stretch: PF1= 5% of diffs more than PA2 = 34.99 mmag (target is < 10 mmag)
+--
+minimum: PF1=18% of diffs more than PA2 = 15.00 mmag (target is < 20 %)
+design : PF1=18% of diffs more than PA2 = 15.00 mmag (target is < 10 %)
+stretch: PF1=26% of diffs more than PA2 = 10.00 mmag (target is <  5 %)
+--
+Median RMS of distances between pairs of stars.
+  DESIGN goals
+  For stars from 17.00 < mag < 21.50 and D = [4.00, 6.00] arcmin
+AM1=8.02 mas (target is < 10 mas).
+  6.44% of sample deviates by >30 mas (target is < 10%)
+--
+Median RMS of distances between pairs of stars.
+  DESIGN goals
+  For stars from 17.00 < mag < 21.50 and D = [19.00, 21.00] arcmin
+AM2=7.41 mas (target is < 10 mas).
+  4.17% of sample deviates by >30 mas (target is < 10%)
+No results available for AM3
+No results available for AF3

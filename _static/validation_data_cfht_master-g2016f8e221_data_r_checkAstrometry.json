@@ -1,0 +1,9 @@
+{
+    "astromErrFitParams": [
+        1600.4875189970007, 
+        4.720021274897597
+    ], 
+    "astromErrModel": "Calculate expected astrometric uncertainty based on SNR.\n\n    mas = C*theta/SNR\n\n    Parameters\n    ----------\n    snr : list or numpy.array\n        S/N of photometric measurements\n    theta : float or numpy.array, optional\n        Seeing [mas]\n    sigma_sys : float\n        Systematic error floor [mas]\n    C : float\n        Scaling factor\n    verbose : bool, optional\n        Produce extra output to STDOUT\n\n    Returns\n    -------\n    np.array\n        Expected astrometric uncertainty. [mas]\n    ", 
+    "astromRmsScatter": 9.8526227289651693, 
+    "name": "checkAstrometry"
+}

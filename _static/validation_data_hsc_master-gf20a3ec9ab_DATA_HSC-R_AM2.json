@@ -1,0 +1,32 @@
+{
+    "ADx_spec": 20, 
+    "AFx": 0.0, 
+    "AFx_spec": 10, 
+    "AMx": 0.0, 
+    "AMx_spec": 10, 
+    "D": 20, 
+    "DUnits": "arcmin", 
+    "adxUnits": "mas", 
+    "afxUnits": "%", 
+    "amxUnits": "mas", 
+    "annulus": [
+        19.0, 
+        21.0
+    ], 
+    "annulusUnits": "arcmin", 
+    "fractionOver": 0.0, 
+    "level": "design", 
+    "magRange": [
+        17.0, 
+        21.5
+    ], 
+    "magRangeUnits": "mag", 
+    "name": "AM2", 
+    "rmsDistMas": [
+        0.0, 
+        0.0, 
+        0.0
+    ], 
+    "rmsUnits": "mas", 
+    "x": 2
+}
