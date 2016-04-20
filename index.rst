@@ -1,7 +1,7 @@
 ..
   Content of technical report.
 
-  See http://docs.lsst.codes/en/latest/development/docs/rst_styleguide.html
+  See http://developer.lsst.io/en/latest/docs/rst_styleguide.html
   for a guide to reStructuredText writing.
 
   Do not put the title, authors or other metadata in this document;
@@ -38,8 +38,6 @@
    Feel free to delete this instructional comment.
 
 :tocdepth: 2
-
-*Draft in Development*
 
 Executive Summary
 =================
@@ -402,3 +400,20 @@ The next three figures are representations of the formal LSST SRD numbers.
 
     Distribution of the repeatability of astrometric distance between stars separted by 4-6 arcminutes.  The SRD spec of AM1=10 mas is shown in red.  The SRD spec for the outlier fraction with RMS relative separation of > AM1+AD1=30 mas (green) is 10.46%, which is only slight above the "design" specification of AF1=10%.
 
+Caveats
+=======
+1. Should use aperture-corrected aperture flux instead of base_PsfFlux (DM-5804).
+2. Star/galaxy separation needs to be improved.  You can see this incompleteness in some of the above plots of RMS vs. mag|SNR, where there seem to be clear contributes from galaxies to the brightSnr sample. (DM-5805)
+
+Future Work
+===========
+Currently scheduled improvements are as follows.
+
+#. `DM-5096 <https://jira.lsst.org/browse/DM-5096>`_ Make validateDrp a Task.
+#. `DM-5097 <https://jira.lsst.org/browse/DM-5097>`_ Update validate_drp to use TransformTask to store calibrated measurements
+#. `DM-5098 <https://jira.lsst.org/browse/DM-5098>`_ Add tests to validate_drp to verify SRD calculations and utility function behavior
+#. `DM-5159 <https://jira.lsst.org/browse/DM-5159>`_ Please use angle and Coord where possible
+#. `DM-5160 <https://jira.lsst.org/browse/DM-5160>`_ Record CCD, visit of input catalog in `validate_drp`
+#. `DM-5804 <https://jira.lsst.org/browse/DM-5804>`_ Use aperture-corrected aperture flux in validate_drp
+#. `DM-5805 <https://jira.lsst.org/browse/DM-5805>`_ Improve star/galaxy separation for validate_drp
+#. `DM-5819 <https://jira.lsst.org/browse/DM-5819>`_ Incorporate Price suggestions to make `validate_drp` faster
