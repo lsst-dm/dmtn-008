@@ -151,7 +151,7 @@ analyzes the existing output repository in ``validation_data_cfht``
     :target: ../../_static/validation_data_cfht_master-g2016f8e221_data_r_check_astrometry.png
 
     Distribution of the RMS in the measured position of the sources for the same object across visits.
-    The expected astrometric error from a single image is :math:`C\theta/{\rm SNR}`.  Note that we here fit to the 
+    The expected astrometric error from a single image is :math:`C \theta/{\rm SNR}`.  Note that we here fit to the 
     joint sample instead of more properly fitting to the seeing in each image.
 
 
@@ -163,8 +163,7 @@ analyzes the existing output repository in ``validation_data_cfht``
     The photometric repeatability in the measured magnitude of the sources for the same object across visits.
     Based on ``base_PsfFlux_flux`` as calibrated using ``calexp.calib``.
     The blue subsample indicates stars with SNR > 100.
-    The fit photometric error model is from LSST Overview
-
+    The fit photometric error model is from the LSST Overview paper.
     (top left) Distribution of RMS for each object.
     (top right) RMS vs. mean magnitude.
     (bottom left) A comparison of the quoted uncertainty vs. the observe variation (log-log scale in mmag).  Quoted magnitude uncertainty from the ``src`` file.  RMS of quoted magnitude.
@@ -190,7 +189,7 @@ The next three figures are representations of the formal LSST SRD numbers.
     :alt: CFHT AM1
     :target: ../../_static/validation_data_cfht_master-g2016f8e221_data_r_AM1_D_5_ARCMIN_17.0-21.5.png
 
-    Distribution of the repeatability of astrometric distance between stars separted by 4-6 arcminutes.  The SRD spec of AM1=10 mas is shown in red.  The SRD spec for the outlier fraction with RMS relative separation of > AM1+AD1=30 mas (green) is 10.46%, which is only slight above the "design" specification of AF1=10%.
+    Distribution of the repeatability of astrometric distance between stars separted by 4-6 arcminutes.  The SRD spec of AM1=10 mas is shown in red.  The SRD spec for the outlier fraction with RMS relative separation of > AM1+AD1=30 mas (green) is 6.44%, which satisfies the "design" specification of AF1=10%.
 
 .. figure:: /_static/validation_data_cfht_master-g2016f8e221_data_r_AM2_D_20_ARCMIN_17.0-21.5.png
     :name: fig-cfht-am2
@@ -258,7 +257,8 @@ Run on sample DECam data
     :target: ../../_static/validation_data_decam_master-ga7c58840c3_data_z_check_astrometry.png
 
     Distribution of the RMS in the measured position of the sources for the same object across visits.
-    The expected astrometric error from a single image is $C\theta/$SNR.  Note that we here fit to the
+    The expected astrometric error from a single image is :math:`C \theta/{\rm SNR}`.  
+    Note that we here fit to the
     joint sample instead of more properly fitting to the seeing in each image.  
     Also note that the fit is terrible.
 
@@ -297,7 +297,7 @@ The next three figures are representations of the formal LSST SRD numbers.
     :alt: DECam AM1
     :target: ../../_static/validation_data_decam_master-ga7c58840c3_data_z_AM1_D_5_ARCMIN_17.0-21.5.png
 
-    Distribution of the repeatability of astrometric distance between stars separted by 4-6 arcminutes.  The SRD spec of AM1=10 mas is shown in red.  The SRD spec for the outlier fraction with RMS relative separation of > AM1+AD1=30 mas (green) is 10.46%, which is only slight above the "design" specification of AF1=10%.
+    Distribution of the repeatability of astrometric distance between stars separted by 4-6 arcminutes.  The SRD spec of AM1=10 mas is shown in red.  The performance of 28.00 mas is shown in black.  The SRD spec for the outlier fraction with RMS relative separation of > AM1+AD1=30 mas (green) is 46.38%, which is catastrophically above the "design" specification of AF1=10%.
 
 .. figure:: /_static/validation_data_decam_master-ga7c58840c3_data_z_AM2_D_20_ARCMIN_17.0-21.5.png
     :name: fig-cfht-am2
@@ -398,7 +398,7 @@ The next three figures are representations of the formal LSST SRD numbers.
     :alt: HSC AM1
     :target: ../../_static/validation_data_hsc_master-gf20a3ec9ab_DATA_HSC-R_AM1_D_5_ARCMIN_17.0-21.5.png
 
-    Distribution of the repeatability of astrometric distance between stars separted by 4-6 arcminutes.  The SRD spec of AM1=10 mas is shown in red.  The SRD spec for the outlier fraction with RMS relative separation of > AM1+AD1=30 mas (green) is 10.46%, which is only slight above the "design" specification of AF1=10%.
+    Distribution of the repeatability of astrometric distance between stars separted by 4-6 arcminutes.  The SRD spec of AM1=10 mas is shown in red.  The measured performance (black) of 11.56 mas is slightly above this spec.  The SRD spec for the outlier fraction with RMS relative separation of > AM1+AD1=30 mas (green) is 21.97%, which is above the "design" specification of AF1=10%.
 
 Caveats
 =======
