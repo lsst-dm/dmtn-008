@@ -100,9 +100,27 @@ Run on sample CFHT data
     setup obs_cfht
     setup validation_data_cfht
     setup validate_drp
-    validateDrp.py ${VALIDATION_DATA_CFHT_DIR}/data
+    validateDrp.py ${VALIDATION_DATA_CFHT_DIR}/data --configFile ${VALIDATION_DATA_CFHT_DIR}/examples/CfhtParameters.yaml
 
 analyzes the existing output repository in ``validation_data_cfht``
+
+There is a configuration file ``examples/CfhtParameters.yaml`` that specifies selection of stars (for now) to analyze and a current set of KPM thresholds to meet.
+
+.. code-block:: yaml
+    :name: cfht-parameters
+
+    # Configuration information for validate_drp to
+    #   1. build the list of data IDs to analyze
+    #   2. load the default magnitude ranges, expected peformance, and num matches
+    good_mag_limit: 21.0  # Only consider stars bright than this limit
+    medianAstromscatterRef: 25  # expected astrometric variability [mas]
+    medianPhotoscatterRef: 25  # expected photometric variability [mmag]
+    matchRef: 5000  # Number of stars expected to match.  Update if you change the ccd list below
+    requirements: {PA1: 25, PF1: 25, PA2: 40, AM1: 12, AF1: 10, AM2: 12, AF2: 10, AM3: null, AF3: null}
+    requirementsUnits: {PA1: 'mmag', PF1: '%', PA2: 'mmag', AM1: 'mas', AF1: '%', AM2: 'mas', AF2: '%', AM3: 'mas', AF3: '%'}
+
+
+The output includes some details on the number of sources found in each visit and then some useful and key summary statistics and model fit results:
 
 .. code-block:: bash
     :name: run-cfht-output
@@ -144,6 +162,36 @@ analyzes the existing output repository in ``validation_data_cfht``
       For stars from 17.00 < mag < 21.50 and D = [19.00, 21.00] arcmin
     AM2=7.41 mas (target is < 10 mas).
       4.17% of sample deviates by >30 mas (target is < 10%)
+    No results available for AM3
+    No results available for AF3
+    =======================================================
+    Comparison against *LSST SRD* 'design' requirements.
+    Measured           Required      Passes
+    PA1 : 18.55 mmag <  5.00 mmag == False
+    PF1 : 17.14 %    < 10.00 %    == False
+    PA2 : 28.40 mmag < 15.00 mmag == False
+    AM1 :  8.02 mas  < 10.00 mas  == True
+    AF1 :  6.44 %    < 10.00 %    == True
+    AM2 :  7.41 mas  < 10.00 mas  == True
+    AF2 :  4.17 %    < 10.00 %    == True
+    No results available for AM3
+    No results available for AF3
+    Failed metric, filter: PA2, r
+    Failed metric, filter: PA1, r
+    Failed metric, filter: PF1, r
+    =======================================================
+    Comparison against *current development* requirements.
+    Measured           Required      Passes
+    PA1 : 18.55 mmag < 25.00 mmag == True
+    PF1 : 17.14 %    < 30.00 %    == True
+    PA2 : 28.40 mmag < 40.00 mmag == True
+    AM1 :  8.02 mas  < 12.00 mas  == True
+    AF1 :  6.44 %    < 10.00 %    == True
+    AM2 :  7.41 mas  < 12.00 mas  == True
+    AF2 :  4.17 %    < 10.00 %    == True
+    No results available for AM3
+    No results available for AF3
+    PASSED.  ALL MEASURED KEY PERFORMANCE METRICS PASSED CURRENT REQUIREMENTS.
 
 .. figure:: /_static/validation_data_cfht_master-g2016f8e221_data_r_check_astrometry.png
     :name: fig-cfht-pa1
