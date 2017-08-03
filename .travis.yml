@@ -1,8 +1,20 @@
 sudo: false
 language: python
-python:
-      - 3.4
-install: "pip install -r requirements.txt"
-script: "make html"
-notifications:
-      email: false
+matrix:
+  include:
+    - python: "3.5"
+      env: LTD_MASON_BUILD=true
+install:
+  - pip install -r requirements.txt
+  - pip install "ltd-mason>=0.2,<0.3"
+script:
+  - sphinx-build -b html -a -n -d _build/doctree . _build/html
+after_success:
+  - ltd-mason-travis --html-dir _build/html
+env:
+  global:
+    - LTD_MASON_BUILD=false  # disable builds in regular text matrix
+    - LTD_MASON_PRODUCT="dmtn-008"
+    # Add AWS and LTD Keeper credentials as encrypted secrets here
+    - secure: "Dt8tnPY4cF+LQaZD1sQ1GZVS/E4hiySAGL5w0awV7N2uH2YTbjbJKJuOkEUR/daYJjymBZO1rzzKQnNCoPE0TUWi43lr4XJd4jn9CS8+cn1wh163SIAU8vBnrssRR1vuaAh/3s6kPx434UjhJbdiDxLQrzmDprxG0OSUA/Fj3tYaN1H/SzBENRo96IExgV98mW63uo+FJGYyX2CNwT7t88CzjFil5bFSmFOtRC/aD9dfvuHT864Wxp+KKbOitUVJp/A2OzdX+a76DQOWb282VBCmTEqRvwNqvfY4nZT/iXmn6CJG34bhmsJNAVSYSxPUWqOhJOIPloxsZYtqsYsW5hm9kdH5ifEbboEWoVSwLVS59wBJ3r3VnY0wcwFH/L5wKIXSvNMs0OM7jqaFtU5g0TXH/lYraCijfOKzySxO6ndPzkBnDozhju6vH1uT+Qi+IOyqAEIt7y7uW0izGhrDyIrOOsa1SqgKog9qDWGWNbxqG3ts6bB/WuX3jlJ89H05JPVcPnw/X7wwAeFxlM+uwEJBLYekvvFEfyrdU5PVFH7kqAq4tuchoiY2uuDDC8Zqzb9ELAK4qmA2c3ighub93UXs4PsSz7NNr3l44w2W14ZNPXVb5kvmESkQE7HcwFhz7fWd7Bu3QO3bmrWPlChPNqK5sOxZXhTpD70WQeDM0Do="
+    - secure: "Jl8fwxtItXnYUzZKvvG3d0vgQI0/wd9xrJw8s/vFjtdfedCpS3tDK0Wkrf+8Ur1fCURw6SCrTJQHKTKADpymEol1A2Z5wU4CrzDagl8Oxnwzwc9ng8BQMBcmw4/Ns7dnSYUrm39MYeTmcfOHr1MS0M4DLN2TjqXC3+IoUH6w7OxbwBEgQhO1gqDA0zTQRLAEkhGY56Ew1ytApRV3BuoW2BSQPtwcDu2I9n/J6CNBKaxykxyvafHzY6Ed2cTwaBH3+CXlwAWaF/j1AGdYjED1d4yQLzWwAYqgf3LROus942+B9jwGnwYc2h0VehmIaOTVLBM4swgmqY3A7YaEJnAW/Pmm42FpK4K4GOctNo3fBHx26kABsCvYggq/nZ00FadA+OC2OLkniBRrYxxwt+Uc+L7DYJ4W0Gn+yV6CR98Tyg5DuCkumccX66yBVMXTsrvYqcOOGH8kaO65gnWu+7tCH5w7N/rRheoS5nJLZubbXv85inpzmT1hjaXycrx2X5KCb5PJkwytyLPDM6Gyh0/7BdojtZQyR3iX9IYK4PzfKDmeWlYyWTVG4nA8swY6azzhU4Eh2b471IAlmbQt9Mnf5Ho/u13Dnz6XyE94yjOOl0rnx3Hj/ZhPSFVm84RBSxerQ5Vi90xn8Jir16o7je630R1nQDR0eby/KOh/6TZ9aws="
